@@ -12,8 +12,8 @@ module Doorkeeper
             @nonce = parameters[:nonce]
           end
         else
-          def initialize(server, client, resource_owner, parameters = {})
-            super
+          def initialize(server, client, credentials, resource_owner, parameters = {})
+            super(server, client, resource_owner, parameters)
             @nonce = parameters[:nonce]
           end
         end
